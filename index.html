@@ -1,0 +1,1535 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" sizes="192x192" href="favicon.png">
+    <title>SA FOODS LAHORE</title>
+    <meta name="theme-color" content="#ff5500">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="SA FOODS LAHORE">
+    <meta name="description"
+          content="Assalam-o-Alaikum We delivers almost every kind of fast food in Lahore, Pakistan. Hygiene, taste and halal is always our first priority. We always deliver high quality and hygienic food to our customers.">
+    <meta name="keywords"
+          content="SA, Foods, Lahore, Sa foods, Sa foods lahore, Hungry, Taste, Fast, Food, Best, Meal, Special, Deals, Order,">
+    <meta name="google-site-verification" content="sdlu4fdlwlrLj1x6nDN2P1mqVqB9Yf9DzdW7MTNFXVQ">
+    <link rel="stylesheet" type="text/css"
+          href="style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148962327-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148962327-1');
+    </script>
+
+    <!--   <script data-ad-client="ca-pub-3859438957644301" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    <!-/script>
+       -->
+    <script src="script.js"></script>
+    <noscript>
+        <style> #main_body {
+            display: block;
+        }
+
+        #splash {
+            display: none;
+        }
+
+        </style>
+    </noscript>
+</head>
+<body onload="loadContent()">
+
+<div style="position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 10;
+background-color: #ffffff;" id="splash">
+    <div style="width: 100%; height: 100%;">
+        <img style="position: absolute; height: 33.33%; top: 30%; left: 0; right: 0; margin: auto;"
+             onload="document.getElementById('splash_text').style.display='block';"
+             src="favicon.png"
+             alt="SA FOODS LOGO">
+        <h6 id="splash_text"
+            style="display: none; position: absolute; width: fit-content; width: -moz-fit-content; font-size: 6vw; bottom: 15%; left: 0; right: 0; margin: auto;">Its all about taste.</h6>
+    </div>
+</div>
+<div id="main_body" class="body">
+    <div class="center">
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC39MZ9" height="0" width="0"
+                    style="display:none;visibility:hidden"></iframe>
+            <h1 style="color: #ffffff; font-size: 2.5vw;">No JavaScript!</h1>
+            <div style="background-color: red; position:fixed; top:0; left: 0; width:100%; z-index:1;"><h1
+                    style="background-color: red; color: #ffffff; font-size: 2.5vw;">JavaScript is disabled some functions may not work properly.</h1>
+            </div>
+        </noscript>
+        <div class="sa_head"><img src="images/sa_logo.svg" width="14%" alt="SA Logo"> <img src="images/sa_head.svg"
+                                                                                           style="margin-left: 2.0%;"
+                                                                                           width="40%"
+                                                                                           alt="SA Foods Lahore">
+            <img id="contact" class="contact" onclick="contact()" src="images/contact.svg" style="margin-left:30%;"
+                 width="12.5%" alt="Contact">
+        </div>
+        <hr style="float: left; width: 100%;">
+        <div id="appDialog" class="app_dialog">
+            <div class="app_dialog_content"><img src="images/sa_playstore_icon.svg" style="margin-top: 4%;" width="40%"
+                                                 alt="SA FOODS LAHORE App Icon">
+                <h1 style="font-size: 6.0vw;">SA FOODS LAHORE</h1>
+                <h2 style="font-size: 5vw;">We strongly recommend you to install our mobile app.<br>Because with our app you can place your order even if you're offline and you can get new deals and offers as soon as we launch them.
+                </h2> <a href="https://play.google.com/store/apps/details?id=com.milkysoft.safoods" target="_blank">
+                    <button style="padding: 2%; margin-bottom: 1%; font-size: 5vw; width: 100%; background-color: #32cd32; color: #ffffff;"> Install Now!</button>
+                </a>
+                <button onclick="closeApp();"
+                        style="padding: 2%; margin-top: 1%; margin-bottom: 1%; margin-right: 1%; font-size: 5vw; width: 49%; background-color: #ff0000; color: #ffffff;"> No Thanks
+                </button>
+                <button onclick="haveApp();"
+                        style="padding: 2%; margin-top: 1%; margin-bottom: 1%; margin-left: 1%; float: right; font-size:  5vw; width: 49%; background-color: #0000ff; color: #ffffff;"> I Have It
+                </button>
+            </div>
+        </div>
+
+        <div id="cartDialog" class="cart_dialog">
+            <div class="cart_dialog_content">
+
+            <span class="close"
+                  onclick="document.getElementById('cartDialog').style.display = 'none';">&times;</span>
+                <h2 style="font-size: 5vw; margin: 0;">My Cart</h2>
+                <hr>
+                <div id="cartItem1">
+                    <h1 id="name1"></h1>
+
+                    <label for="cond1"></label><select id="cond1" onchange="updateCartSpinner('1');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan1"></label><select id="quan1"
+                                                                                                      onchange="updateCartSpinner('1');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink1"></label><select id="drink1"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('1')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName1" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order1"></h2>
+                    <button class="delete" onclick="deleteCartItem('1')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem2">
+                    <h1 id="name2"></h1>
+
+                    <label for="cond2"></label><select id="cond2" onchange="updateCartSpinner('2');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan2"></label><select id="quan2"
+                                                                                                      onchange="updateCartSpinner('2');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink2"></label><select id="drink2"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('2')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName2" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order2"></h2>
+                    <button class="delete" onclick="deleteCartItem('2')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem3">
+                    <h1 id="name3"></h1>
+
+                    <label for="cond3"></label><select id="cond3" onchange="updateCartSpinner('3');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan3"></label><select id="quan3"
+                                                                                                      onchange="updateCartSpinner('3');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink3"></label><select id="drink3"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('3')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName3" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order3"></h2>
+                    <button class="delete" onclick="deleteCartItem('3')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem4">
+                    <h1 id="name4"></h1>
+
+                    <label for="cond4"></label><select id="cond4" onchange="updateCartSpinner('4');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan4"></label><select id="quan4"
+                                                                                                      onchange="updateCartSpinner('4');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink4"></label><select id="drink4"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('4')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName4" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order4"></h2>
+                    <button class="delete" onclick="deleteCartItem('4')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem5">
+                    <h1 id="name5"></h1>
+
+                    <label for="cond5"></label><select id="cond5" onchange="updateCartSpinner('5');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan5"></label><select id="quan5"
+                                                                                                      onchange="updateCartSpinner('5');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink5"></label><select id="drink5"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('5')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName5" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order5"></h2>
+                    <button class="delete" onclick="deleteCartItem('5')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem6">
+                    <h1 id="name6"></h1>
+
+                    <label for="cond6"></label><select id="cond6" onchange="updateCartSpinner('6');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan6"></label><select id="quan6"
+                                                                                                      onchange="updateCartSpinner('6');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink6"></label><select id="drink6"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('6')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName6" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order6"></h2>
+                    <button class="delete" onclick="deleteCartItem('6')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem7">
+                    <h1 id="name7"></h1>
+
+                    <label for="cond7"></label><select id="cond7" onchange="updateCartSpinner('7');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan7"></label><select id="quan7"
+                                                                                                      onchange="updateCartSpinner('7');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink7"></label><select id="drink7"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('7')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName7" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order7"></h2>
+                    <button class="delete" onclick="deleteCartItem('7')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem8">
+                    <h1 id="name8"></h1>
+
+                    <label for="cond8"></label><select id="cond8" onchange="updateCartSpinner('8');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan8"></label><select id="quan8"
+                                                                                                      onchange="updateCartSpinner('8');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink8"></label><select id="drink8"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('8')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName8" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order8"></h2>
+                    <button class="delete" onclick="deleteCartItem('8')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem9">
+                    <h1 id="name9"></h1>
+
+                    <label for="cond9"></label><select id="cond9" onchange="updateCartSpinner('9');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan9"></label><select id="quan9"
+                                                                                                      onchange="updateCartSpinner('9');"
+                                                                                                      class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink9"></label><select id="drink9"
+                                                                                                      class="select"
+                                                                                                      onchange="updateCartSpinner('9')"
+                                                                                                      style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName9" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order9"></h2>
+                    <button class="delete" onclick="deleteCartItem('9')">Delete</button>
+                    <hr>
+                </div>
+                <div id="cartItem10">
+                    <h1 id="name10"></h1>
+
+                    <label for="cond10"></label><select id="cond10" onchange="updateCartSpinner('10');" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan10"></label><select id="quan10"
+                                                                                                       onchange="updateCartSpinner('10');"
+                                                                                                       class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                    <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink10"></label><select id="drink10"
+                                                                                                       class="select"
+                                                                                                       onchange="updateCartSpinner('10')"
+                                                                                                       style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+                    <h2 id="drinkName10" style="font-size: 4.5vw;">Cold Drink :</h2>
+                    <h2 id="order10"></h2>
+                    <button class="delete" onclick="deleteCartItem('10')">Delete</button>
+                    <hr>
+                </div>
+
+                <div id="cartDetails">
+                    <h2 id="tot_items"></h2>
+                    <h2 id="sub_cart_tot"></h2>
+                    <h2 id="cart_del"></h2>
+                    <h2 id="cart_tot"></h2>
+                    <h2>Location : </h2>
+                    <div id="cart_map_load" class="map_loading">
+                        <div class="red"></div>
+                        <div class="green"></div>
+                        <div class="blue"></div>
+                        <div class="yellow"></div>
+                    </div>
+                    <img id="cart_done_map" style="width: 100%; display: none;" src="images/done_map.svg" width="100%"
+                         onclick="openLocation();" alt="Your Location">
+                    <h2 id="cart_location_text">Getting Your Location...</h2>
+                    <div style="width: 100%;"><img src="images/refresh.svg" onclick="getLocation();" id="cart_refresh"
+                                                   width="20%"
+                                                   style="display: none; margin-bottom: 50px;" alt="Refresh"></div>
+                    <button onclick="closeCart()" id="cancel1" class="cancel">Cancel</button>
+                    <button onclick="sendCart()" id="cartDone" class="done">Done</button>
+                </div>
+                <h2 style="font-size: 4vw; width: 100%" id="emptyCart">You have 0 items in your cart.</h2>
+            </div>
+        </div>
+
+        <div id="sendDialog" class="send_dialog">
+            <div class="send_dialog_content"><span class="close"
+                                                   onclick="document.getElementById('sendDialog').style.display = 'none';">&times;</span>
+                <h2 style="font-size: 5vw; font-weight: bold;">How do want to send your order?</h2>
+                <hr>
+                <div onclick="sendWa()"><h2 style="font-size: 4.5vw;">WhatsApp (Recommended)</h2></div>
+                <hr>
+                <div onclick="sendSms()"><h2 style="font-size: 4.5vw;">Mobile SMS (Charges may apply)</h2></div>
+                <hr>
+                <button onclick="document.getElementById('sendDialog').style.display = 'none';"
+                        style="padding: 2%; font-size: 4.5vw; width: 50%; background-color: #ff0000; color: #ffffff;">Cancel
+                </button>
+            </div>
+        </div>
+        <div id="callDialog" class="call_dialog">
+            <div class="call_dialog_content"><span class="close" onclick="closeCallDialog()">&times;</span>
+                <h2 style="font-size: 6vw; float: right; width: 100%; color: white;">How do you want to call us?</h2> <a
+                        href="https://wa.me/923228054617?text=Assalam-o-Alaikum%0AI%20am%20your%20website%20visiter%20and%20I%20did%20like%20to%20call%20you."
+                        target="_blank"> <img style="width: 40%;" class="whatsapp" src="images/whatsapp.svg"
+                                              alt="WhatsApp Call">
+                    <h2 style="color: white;">WhatsApp Call</h2></a> <a href="tel:03228054617" target="_blank"> <img
+                        style="width: 40%;" class="phone" src="images/contact.svg" alt="Phone Call">
+                    <h2 style="color: white;">Phone Call</h2></a>
+                <button onclick="closeCallDialog()"
+                        style="padding: 2%; background-color: #ff0000; color: #ffffff; font-size: 5.0vw; width: 100%;"> Cancel
+                </button>
+            </div>
+        </div>
+        <div id="orderDialog" class="order_dialog">
+            <div id="orderDialogContent" class="order_dialog_content"><span class="close"
+                                                                            onclick="closeOrderDialog()">&times;</span>
+                <img
+                        id="image" src="images/no_image.svg" width="100%" alt="Your Order">
+                <h1 id="name"></h1> <label for="cond"></label><select id="cond" onchange="update();" class="select">
+                    <option value="1">Fried</option>
+                    <option value="2">Frozen</option>
+                </select>
+                <h2 style="font-size: 4.5vw;">Condition :</h2> <label for="quan"></label><select id="quan"
+                                                                                                 onchange="update();"
+                                                                                                 class="select">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5">5 Pieces</option>
+                    <option value="6">6 Pieces</option>
+                    <option value="7">7 Pieces</option>
+                    <option value="8">8 Pieces</option>
+                    <option value="9">9 Pieces</option>
+                    <option value="10">10 Pieces</option>
+                </select>
+                <h2 style="font-size: 4.5vw;">Quantity :</h2> <label for="drink"></label><select id="drink"
+                                                                                                 class="select"
+                                                                                                 onchange="update()"
+                                                                                                 style="display: none">
+                    <option value="1">Random</option>
+                    <option value="2">Coke</option>
+                    <option value="3">Sprite</option>
+                    <option value="4">Fanta</option>
+                </select>
+
+                <h2 id="drinkName" style="font-size: 4.5vw;">Cold Drink :</h2>
+                <h2 id="or"></h2>
+                <h2 id="del"></h2>
+                <h2 id="tot"></h2>
+                <h2>Location : </h2>
+                <div id="map_load" class="map_loading">
+                    <div class="red"></div>
+                    <div class="green"></div>
+                    <div class="blue"></div>
+                    <div class="yellow"></div>
+                </div>
+                <img id="done_map" style="width: 100%; display: none;" src="images/done_map.svg" width="100%"
+                     onclick="openLocation();" alt="Your Location">
+                <h2 id="location_text">Getting Your Location...</h2>
+                <div style="width: 100%;"><img src="images/refresh.svg" onclick="getLocation();" id="refresh"
+                                               width="20%"
+                                               style="display: none; margin-bottom: 50px;" alt="Refresh"></div>
+                <button onclick="closeOrderDialog()" id="cancel" class="cancel">Cancel</button>
+                <button onclick="done()" id="done" class="done">Done</button>
+            </div>
+        </div>
+        <div class="time_dialog" id="timeDialog">
+            <div class="time_dialog_content"><h2 style="margin-top: 0; margin-bottom: 0;">Sorry!</h2>
+                <hr>
+                <h2 style="margin-top: 2%; margin-bottom: 0; font-size: 5vw;">We don't delivers at this time.</h2>
+                <h2 style="margin-top: 2%; margin-bottom: 0; font-size: 5vw;">Our Timings Are :</h2>
+                <h2 style="margin-top: 2%; margin-bottom: 2%; font-size: 4vw"> Monday 12:00 pm to 11:59pm
+                    <br>Tuesday 12:00 pm to 11:59pm <br>Wednesday 12:00 pm to 11:59pm <br>Thursday 12:00 pm to 11:59pm
+                    <br>Friday 03:00 pm to 11:59pm <br>Saturday 12:00 pm to 11:59pm <br>Sunday 12:00 pm to 11:59pm </h2>
+                <button onclick="closeTimeDialog()" class="time_ok">OK</button>
+            </div>
+        </div>
+        <div class="main_img"><img src="images/main.svg" width="100%" alt="SA FOODS LAHORE">
+            <div class="search" onfocusout="searchOut()">
+                <div class="search_bar"><img class="search_icon" src="images/searchicon.png" alt="Search"> <input
+                        type="text" id="search" class="search_edit" onkeyup="search()"
+                        onfocusin="document.getElementById('searchOptions').style.display='block'"
+                        placeholder="Search the food you love..." title="Search Food"></div>
+                <ul id="searchOptions" class="search_options">
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#1">Chicken Vegetable Soup</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#2">Chicken Biscuit</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#3">Chicken Pakora</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#4">Big Chicken Roll</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#5">French Fries</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#6">Hot Wings</a>
+                    </li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#7">Chicken Shami</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#8">Big Chicken Samosa</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#9">Big Vegetable Samosa</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#10">Big Potato Samosa</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#11">Special Penne Pasta with white sauce</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#12">Special Laddu Pethi with red &amp; green chatni</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#13">Chicken Corn Soup</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#14">Big Vegetable Roll</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#15">Big Potato Roll</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#16">Chicken Paratha Roll</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#17">Potato Tikki</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#18">Frozen Paratha Plane</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#19">Chicken Nuggets</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#20">Chicken Shots</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#21">Beef Shami</a>
+                    </li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#22">Chicken Patties</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#23">Zinger Patties</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#24">Chicken Drumstick</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#25">Chicken Kabab</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#26">Beef Kabab</a>
+                    </li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#27">Chicken Tikka Samosa</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#28">Frozen Merination Masala</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#29">Zinger Paratha Roll</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#30">Petti Paratha Roll</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#31">Zinger Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#32">Chicken Petti Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#33">Chicken Shami Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#34">Special Tower Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#35">Special Tower Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#36">Special Tower Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#37">Special Tower Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#38">Special Tower Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#39">Chicken Biscuit Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#40">Spicy Bite Burger</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#41">Omelette Paratha Roll</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#42">Chicken Omelette Paratha Roll</a></li>
+                    <li class="options_body"><a class="options_name" onclick="changeSearch(this);"
+                                                href="#43">Cheese Omelette Paratha Roll</a></li>
+                </ul>
+            </div>
+        </div>
+        <h2> Assalam-o-Alaikum! </h2>
+        <p style="font-size: 4vw;">We delivers almost every kind of fast food in Lahore, Pakistan.</p>
+        <div style="background-color: #ffff00" class="head">
+            <hr>
+            <h3 id="deals" style="background-color:#ff5500" onclick="openDeals();">Our Deals (17) +</h3>
+            <hr>
+        </div>
+        <div id="our_deals" class="our_deals" style="display:none;">
+            <img id="deal1" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal1.svg'){document.getElementById('deal2').src = 'images/deal2.svg';}"
+                 alt="Deals #1" width="100%">
+            <h1>Deal #1</h1>
+            <h2 class="item_details"> Chicken Paratha Roll (1) <br>French Fries Qtr (1) <br>Cold Drink 345ml (1)
+                <br>Price : 240/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('1','0','images/deal1.svg','Deal #1','0','240','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal1.svg','Deal #1','0','240','0');"
+                    class="add_cart" id="addCartd1">Add to cart!
+            </button>
+            <hr>
+            <img id="deal2" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal2.svg'){document.getElementById('deal3').src = 'images/deal3.svg';}"
+                 alt="Deals #2" width="100%">
+            <h1> Deal #2 </h1>
+            <h2 class="item_details"> Hot Wings (4)<br>French Fries Qtr (1)<br>Cold Drink 345ml (1)<br>Price : 260/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal2.svg','Deal #2','0','260','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this, '1','0','images/deal2.svg','Deal #2','0','260','0');"
+                    class="add_cart" id="addCartd2">Add to cart!
+            </button>
+            <hr>
+            <img id="deal3" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal3.svg'){document.getElementById('deal4').src = 'images/deal4.svg';}"
+                 alt="Deals #3" width="100%">
+            <h1> Deal #3 </h1>
+            <h2 class="item_details"> Zinger Paratha (1)<br>French Fries Qtr (1)<br>Cold Drink 345ml (1)<br>Price : 270/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal3.svg','Deal #3','0','270','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+
+            <button onclick="addToCart(this, '1','0','images/deal3.svg','Deal #3','0','270','0');"
+                    class="add_cart" id="addCartd3">Add to cart!
+            </button>
+            <hr>
+            <img id="deal4" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal4.svg'){document.getElementById('deal5').src = 'images/deal5.svg';}"
+                 alt="Deals #4" width="100%">
+            <h1> Deal #4 </h1>
+            <h2 class="item_details"> Chicken Nuggets (7)<br>French Fries Qtr (1)<br>Cold Drink 345ml (1)<br>Price : 240/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal4.svg','Deal #4','0','240','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal4.svg','Deal #4','0','240','0'); "
+                    class="add_cart" id="addCartd4">Add to cart!
+            </button>
+            <hr>
+            <img id="deal5" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal5.svg'){document.getElementById('deal6').src = 'images/deal6.svg';}"
+                 alt="Deals #5" width="100%">
+            <h1> Deal #5 </h1>
+            <h2 class="item_details"> Chicken Paratha Roll (1)<br>Zinger Paratha Roll (1)<br>French Fries Qtr (1)<br>Cold Drink 500ml (1)<br>Price : 400/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal5.svg','Deal #5','0','400','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this, '1','0','images/deal5.svg','Deal #5','0','400','0');"
+                    class="add_cart" id="addCartd5">Add to cart!
+            </button>
+            <hr>
+            <img id="deal6" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal6.svg'){document.getElementById('deal7').src = 'images/deal7.svg';}"
+                 alt="Deals #6" width="100%">
+            <h1> Deal #6 </h1>
+            <h2 class="item_details"> Zinger Burger (2)<br>French Fries Qtr (1)<br>Cold Drink 500ml (1)<br>Price : 400/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal6.svg','Deal #6','0','400','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal6.svg','Deal #6','0','400','0'); "
+                    class="add_cart" id="addCartd6">Add to cart!
+            </button>
+            <hr>
+            <img id="deal7" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal7.svg'){document.getElementById('deal8').src = 'images/deal8.svg';}"
+                 alt="Deals #7" width="100%">
+            <h1> Deal #7 </h1>
+            <h2 class="item_details"> Chicken Petti Burger (1)<br>Chicken Shami Burger (1)<br>French Fries Qtr (1)<br>Cold Drink 500ml (1)<br>Price : 370/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal7.svg','Deal #7','0','370','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal7.svg','Deal #7','0','370','0'); "
+                    class="add_cart" id="addCartd7">Add to cart!
+            </button>
+            <hr>
+            <img id="deal8" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal8.svg'){document.getElementById('deal9').src = 'images/deal9.svg';}"
+                 alt="Deals #8" width="100%">
+            <h1> Deal #8 </h1>
+            <h2 class="item_details"> Chicken Petti Burger (1)<br>Chicken nuggets (4)<br>Chicken Pakora (4)<br>Cold Drink 500ml (1)<br>Price : 400/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal8.svg','Deal #8','0','400','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal8.svg','Deal #8','0','400','0'); "
+                    class="add_cart" id="addCartd8">Add to cart!
+            </button>
+            <hr>
+            <img id="deal9" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal9.svg'){document.getElementById('deal10').src = 'images/deal10.svg';}"
+                 alt="Deals #9" width="100%">
+            <h1> Deal #9 </h1>
+            <h2 class="item_details"> Zinger Burger (1)<br>Hot Wings (2)<br>Chicken Drumstick (1)<br>French Fries Qtr (1)<br>Cold Drink 500ml (1)<br>Price : 420/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal9.svg','Deal #9','0','420','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal9.svg','Deal #9','0','420','0'); "
+                    class="add_cart" id="addCartd9">Add to cart!
+            </button>
+            <hr>
+            <img id="deal10" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal10.svg'){document.getElementById('deal11').src = 'images/deal11.svg';}"
+                 alt="Deals #10" width="100%">
+            <h1> Deal #10 </h1>
+            <h2 class="item_details"> Chicken Drumstick (4)<br>Chicken Shots (4)<br>Cold Drink 500ml (1)<br>Price : 500/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal10.svg','Deal #10','0','500','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this, '1','0','images/deal10.svg','Deal #10','0','500','0');"
+                    class="add_cart" id="addCartd10">Add to cart!
+            </button>
+            <hr>
+            <img id="deal11" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal11.svg'){document.getElementById('deal12').src = 'images/deal12.svg';}"
+                 alt="Deals #11" width="100%">
+            <h1> Deal #11 </h1>
+            <h2 class="item_details"> Chicken Shami Burger (1)<br>Chicken Drumstick (1)<br>French Fries Qtr (1)<br>Cold Drink 500ml (1)<br>Price : 300/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal11.svg','Deal #11','0','300','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal11.svg','Deal #11','0','300','0'); "
+                    class="add_cart" id="addCartd11">Add to cart!
+            </button>
+            <hr>
+            <img id="deal12" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal12.svg'){document.getElementById('deal13').src = 'images/deal13.svg';}"
+                 alt="Deals #12" width="100%">
+            <h1> Deal #12 </h1>
+            <h2 class="item_details"> Zinger Burger (2)<br>Hot Wings (2)<br>French Fries (1)<br>Cold Drink 500ml (1)<br>Price : 530/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal12.svg','Deal #12','0','530','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this, '1','0','images/deal12.svg','Deal #12','0','530','0');"
+                    class="add_cart" id="addCartd12">Add to cart!
+            </button>
+            <hr>
+            <img id="deal13" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal13.svg'){document.getElementById('deal14').src = 'images/deal14.svg';}"
+                 alt="Deals #13" width="100%">
+            <h1> Deal #13 </h1>
+            <h2 class="item_details"> Zinger Paratha Roll (2)<br>Chicken Shami Burger (2)<br>Hot Wings (2)<br>French Fries (2)<br>Cold Drink 500ml (1)<br>Price : 770/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal13.svg','Deal #13','0','770','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this, '1','0','images/deal13.svg','Deal #13','0','770','0');"
+                    class="add_cart" id="addCartd13">Add to cart!
+            </button>
+            <hr>
+            <img id="deal14" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal14.svg'){document.getElementById('deal15').src = 'images/deal15.svg';}"
+                 alt="Deals #14" width="100%">
+            <h1> Deal #14 </h1>
+            <h2 class="item_details"> Chicken Paratha Roll (2)<br>French Fries (1)<br>Cold Drink 500ml (1)<br>Price : 400/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal14.svg','Deal #14','0','400','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal14.svg','Deal #14','0','400','0'); "
+                    class="add_cart" id="addCartd14">Add to cart!
+            </button>
+            <hr>
+            <img id="deal15" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal15.svg'){document.getElementById('deal16').src = 'images/deal16.svg';}"
+                 alt="Deals #15" width="100%">
+            <h1> Deal #15 </h1>
+            <h2 class="item_details"> Zinger Burger (4)<br>Hot Wings (2)<br>French Fries (2)<br>Cold Drink 500ml (2)<br>Price : 890/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('1','0','images/deal15.svg','Deal #15','0','890','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal15.svg','Deal #15','0','890','0'); "
+                    class="add_cart" id="addCartd15">Add to cart!
+            </button>
+            <hr>
+            <img id="deal16" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/deal16.svg'){document.getElementById('deal17').src = 'images/deal17.svg';}"
+                 alt="Deals #16" width="100%">
+            <h1> Deal #16 </h1>
+            <h2 class="item_details"> Spicy Bite Burger (1) <br>French Fries (1) <br>Cold Drink 345ml (1)
+                <br>Price : 250/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('1','0','images/deal16.svg','Deal #16','0','250','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'1','0','images/deal16.svg','Deal #16','0','250','0');  "
+                    class="add_cart" id="addCartd16">Add to cart!
+            </button>
+            <hr>
+            <img id="deal17" src="images/no_image.svg" alt="Deals #17" width="100%">
+            <h1> Deal #17 </h1>
+            <h2 class="item_details"> Chicken Chapati Burger (2) <br>French Fries (1) <br>Cold Drink 500ml (1)
+                <br>Price : 280/- RS
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('1','0','images/deal17.svg','Deal #17',0,'280','0'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this, '1','0','images/deal17.svg','Deal #17',0,'280','0');"
+                    class="add_cart" id="addCartd17">Add to cart!
+            </button>
+        </div>
+        <hr> <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3859438957644301" data-ad-slot="1317863017" data-ad-format="auto" data-full-width-responsive="true"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script> -->
+        <div style="background-color: #ffff00;" class="head">
+            <hr>
+            <h3 id="menu" style="background-color:#ff5500;" onclick="openMenu()">Our Menu (43)</h3>
+            <hr>
+        </div>
+        <div id="menu_list" class="menu_list">
+            <img id="1" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/1.svg'){document.getElementById('2').src='images/2.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Vegetable Soup </h1>
+            <h2 class="item_details"> Price : 260/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('2','0','images/1.svg','Chicken Vegetable Soup','0','260','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'2','0','images/1.svg','Chicken Vegetable Soup','0','260','0');  "
+                    class="add_cart" id="addCart1">Add to cart!
+            </button>
+            <hr>
+            <img id="2" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/2.svg'){document.getElementById('3').src='images/3.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Biscuit </h1>
+            <h2 class="item_details"> Fried : 120/- RS<br>Frozen : 110- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/2.svg','Chicken Biscuit','2','120','110'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/2.svg','Chicken Biscuit','2','120','110'); "
+                    class="add_cart" id="addCart2">Add to cart!
+            </button>
+            <hr>
+            <img id="3" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/3.svg'){document.getElementById('4').src='images/4.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Pakora </h1>
+            <h2 class="item_details"> Fried : 150/- RS<br>Frozen : 135/- RS<br>Quantity : 8 Pieces</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('4','0','images/3.svg','Chicken Pakora','2','150','135'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'4','0','images/3.svg','Chicken Pakora','2','150','135'); "
+                    class="add_cart" id="addCart3">Add to cart!
+            </button>
+            <hr>
+            <img id="4" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/4.svg'){document.getElementById('5').src='images/5.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Big Chicken Roll </h1>
+            <h2 class="item_details"> Fried : 120/- RS<br>Frozen : 110/- RS<br>Quantity : 4 Pieces</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('3','0','images/4.svg','Big Chicken Roll','2','120','110'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'3','0','images/4.svg','Big Chicken Roll','2','120','110'); "
+                    class="add_cart" id="addCart4">Add to cart!
+            </button>
+            <hr>
+            <img id="5" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/5.svg'){document.getElementById('6').src='images/6.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> French Fries </h1>
+            <h2 class="item_details"> Fried : 100/- RS<br>Quantity : 1 Box<br>Frozen : 440/- RS<br>Quantity : 1 KG</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('2','1','images/5.svg','French Fries','2','100','440'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'2','1','images/5.svg','French Fries','2','100','440'); "
+                    class="add_cart" id="addCart5">Add to cart!
+            </button>
+            <hr>
+            <img id="6" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/6.svg'){document.getElementById('7').src='images/7.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Hot Wings </h1>
+            <h2 class="item_details"> Fried : 230/- RS<br>Frozen : 215/- RS<br>Quantity : 5 Pieces</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('5','0','images/6.svg','Hot Wings','2','230','215'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'5','0','images/6.svg','Hot Wings','2','230','215'); "
+                    class="add_cart" id="addCart6">Add to cart!
+            </button>
+            <hr>
+            <img id="7" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/7.svg'){document.getElementById('8').src='images/8.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Shami </h1>
+            <h2 class="item_details"> Fried : 50/- RS<br>Frozen : 45/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/7.svg','Chicken Shami','2','50','45'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/7.svg','Chicken Shami','2','50','45'); "
+                    class="add_cart" id="addCart7">Add to cart!
+            </button>
+            <hr>
+            <img id="8" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/8.svg'){document.getElementById('9').src='images/9.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Big Chicken Samosa </h1>
+            <h2 class="item_details"> Fried : 100/- RS<br>Quantity : 4 Pieces<br>Frozen : 140/- RS<br>Quantity : 6 Pieces
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('3','2','images/8.svg','Big Chicken Samosa','2','100','140'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this, '3','2','images/8.svg','Big Chicken Samosa','2','100','140');"
+                    class="add_cart" id="addCart8">Add to cart!
+            </button>
+            <hr>
+            <img id="9" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/9.svg'){document.getElementById('10').src='images/10.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Big Vegetable Samosa </h1>
+            <h2 class="item_details"> Fried : 80/- RS<br>Quantity : 4 Pieces<br>Frozen : 110/- RS<br>Quantity : 6 Pieces
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('3','2','images/9.svg','Big Vegetable Samosa','2','80','110'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'3','2','images/9.svg','Big Vegetable Samosa','2','80','110');"
+                    class="add_cart" id="addCart9">Add to cart!
+            </button>
+            <hr>
+            <img id="10" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/10.svg'){document.getElementById('11').src='images/11.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Big Potato Samosa </h1>
+            <h2 class="item_details"> Fried : 70/- RS<br>Quantity : 4 Pieces<br>Frozen : 90/- RS<br>Quantity : 6 Pieces
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('3','2','images/10.svg','Big Potato Samosa','2','70','90'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this, '3','2','images/10.svg','Big Potato Samosa','2','70','90');"
+                    class="add_cart" id="addCart0">Add to cart!
+            </button>
+            <hr> <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3859438957644301" data-ad-slot="6344310051" data-ad-format="auto" data-full-width-responsive="true"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script> -->
+            <hr>
+            <img id="11" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/11.svg'){document.getElementById('12').src='images/12.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Special Penne Pasta with white sauce </h1>
+            <h2 class="item_details"> Price : 360/- RS<br>Quantity : 1 Box</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('2','0','images/11.svg','Special Penne Pasta with white sauce','0','360','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'2','0','images/11.svg','Special Penne Pasta with white sauce','0','360','0');"
+                    class="add_cart" id="addCart11">Add to cart!
+            </button>
+            <hr>
+            <img id="12" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/12.svg'){document.getElementById('13').src='images/13.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Special Laddu Pethi with red & green chatni </h1>
+            <h2 class="item_details"> Price : 200/- RS<br>Quantity : 6 Pieces</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('6','0','images/12.svg','Special Laddu Pethi with red & green chatni','0','200','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'6','0','images/12.svg','Special Laddu Pethi with red & green chatni','0','200','0');"
+                    class="add_cart" id="addCart12">Add to cart!
+            </button>
+            <hr>
+            <img id="13" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/13.svg'){document.getElementById('14').src='images/14.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Corn Soup </h1>
+            <h2 class="item_details"> Price : 280/- RS<br>Quantity : 1 Box</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('2','0','images/13.svg','Chicken Corn Soup','0','280','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'2','0','images/13.svg','Chicken Corn Soup','0','280','0');"
+                    class="add_cart" id="addCart13">Add to cart!
+            </button>
+            <hr>
+            <img id="14" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/14.svg'){document.getElementById('15').src='images/15.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Big Vegetable Roll </h1>
+            <h2 class="item_details"> Fried : 100/- RS<br>Frozen : 90/- RS<br>Quantity : 4 Pieces</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('3','0','images/14.svg','Big Vegetable Roll','2','100','90'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'3','0','images/14.svg','Big Vegetable Roll','2','100','90');"
+                    class="add_cart" id="addCart14">Add to cart!
+            </button>
+            <hr>
+            <img id="15" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/15.svg'){document.getElementById('16').src='images/16.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Big Potato Roll </h1>
+            <h2 class="item_details"> Fried : 80/- RS<br>Frozen : 70/- RS<br>Quantity : 4 Pieces</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('3','0','images/15.svg','Big Potato Roll','2','80','70'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'3','0','images/15.svg','Big Potato Roll','2','80','70');"
+                    class="add_cart" id="addCart15">Add to cart!
+            </button>
+            <hr>
+            <img id="16" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/16.svg'){document.getElementById('17').src='images/17.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Paratha Roll </h1>
+            <h2 class="item_details"> Price : 150/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/16.svg','Chicken Paratha Roll','0','150','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/16.svg','Chicken Paratha Roll','0','150','0');"
+                    class="add_cart" id="addCart16">Add to cart!
+            </button>
+            <hr>
+            <img id="17" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/17.svg'){document.getElementById('18').src='images/18.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Potato Tikki </h1>
+            <h2 class="item_details"> Fried : 35/- RS<br>Frozen : 32/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/17.svg','Potato Tikki','2','35','32'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/17.svg','Potato Tikki','2','35','32');"
+                    class="add_cart" id="addCart17">Add to cart!
+            </button>
+            <hr>
+            <img id="18" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/18.svg'){document.getElementById('19').src='images/19.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Frozen Paratha Plane </h1>
+            <h2 class="item_details"> Frozen : 120/- RS<br>Quantity : 4 Pieces</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('3','0','images/18.svg','Frozen Paratha Plane','4','120','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'3','0','images/18.svg','Frozen Paratha Plane','4','120','0');"
+                    class="add_cart" id="addCart18">Add to cart!
+            </button>
+            <hr>
+            <img id="19" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/19.svg'){document.getElementById('20').src='images/20.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Nuggets </h1>
+            <h2 class="item_details"> Fried : 25/- RS<br>Quantity : 1 Piece<br>Frozen : 115/- RS<br>Quantity : 5 Pieces
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('0','3','images/19.svg','Chicken Nuggets','2','25','115'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','3','images/19.svg','Chicken Nuggets','2','25','115');"
+                    class="add_cart" id="addCart19">Add to cart!
+            </button>
+            <hr>
+            <img id="20" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/20.svg'){document.getElementById('21').src='images/21.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Shots </h1>
+            <h2 class="item_details"> Fried : 150/- RS<br>Frozen : 135/- RS<br>Quantity : 8 Pieces</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('4','0','images/20.svg','Chicken Shots','2','150','135'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'4','0','images/20.svg','Chicken Shots','2','150','135');"
+                    class="add_cart" id="addCart20">Add to cart!
+            </button>
+            <hr> <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3859438957644301" data-ad-slot="2384883741" data-ad-format="auto" data-full-width-responsive="true"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script> -->
+            <hr>
+            <img id="21" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/21.svg'){document.getElementById('22').src='images/22.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Beef Shami </h1>
+            <h2 class="item_details"> Fried : 50/- RS<br>Frozen : 45/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/21.svg','Beef Shami','2','50','45'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/21.svg','Beef Shami','2','50','45');"
+                    class="add_cart" id="addCart21">Add to cart!
+            </button>
+            <hr>
+            <img id="22" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/22.svg'){document.getElementById('23').src='images/23.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Patties </h1>
+            <h2 class="item_details"> Fried : 90/- RS<br>Frozen : 85/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/22.svg','Chicken Patties','2','90','85'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/22.svg','Chicken Patties','2','90','85');"
+                    class="add_cart" id="addCart22">Add to cart!
+            </button>
+            <hr>
+            <img id="23" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/23.svg'){document.getElementById('24').src='images/24.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Zinger Patties </h1>
+            <h2 class="item_details"> Fried : 90/- RS<br>Frozen : 85/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/23.svg','Zinger Patties','2','90','85'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/23.svg','Zinger Patties','2','90','85');"
+                    class="add_cart" id="addCart23">Add to cart!
+            </button>
+            <hr>
+            <img id="24" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/24.svg'){document.getElementById('25').src='images/25.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Drumstick </h1>
+            <h2 class="item_details"> Fried : 90/- RS<br>Frozen : 85/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/24.svg','Chicken Drumstick','2','90','85'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/24.svg','Chicken Drumstick','2','90','85');"
+                    class="add_cart" id="addCart24">Add to cart!
+            </button>
+            <hr>
+            <img id="25" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/25.svg'){document.getElementById('26').src='images/26.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Kabab </h1>
+            <h2 class="item_details"> Fried : 55/- RS<br>Quantity : 1 Piece<br>Frozen : 260/- RS<br>Quantity : 5 Pieces
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('0','3','images/25.svg','Chicken Kabab','2','55','260'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','3','images/25.svg','Chicken Kabab','2','55','260');"
+                    class="add_cart" id="addCart25">Add to cart!
+            </button>
+            <hr>
+            <img id="26" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/26.svg'){document.getElementById('27').src='images/27.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Beef Kabab </h1>
+            <h2 class="item_details"> Fried : 55/- RS<br>Quantity : 1 Piece<br>Frozen : 260/- RS<br>Quantity : 5 Pieces
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('0','3','images/26.svg','Beef Kabab','2','55','260'); getLocation();"
+                    class="order_now"> Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','3','images/26.svg','Beef Kabab','2','55','260');"
+                    class="add_cart" id="addCart26">Add to cart!
+            </button>
+            <hr>
+            <img id="27" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/27.svg'){document.getElementById('28').src='images/28.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Tikka Samosa </h1>
+            <h2 class="item_details"> Fried : 120/- RS<br>Quantity : 4 Pieces<br>Frozen : 165/- RS<br>Quantity : 6 Pieces
+            </h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)
+            </h2>
+            <button onclick="order('3','2','images/27.svg','Chicken Tikka Samosa','2','120','165'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'3','2','images/27.svg','Chicken Tikka Samosa','2','120','165');"
+                    class="add_cart" id="addCart27">Add to cart!
+            </button>
+            <hr>
+            <img id="28" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/28.svg'){document.getElementById('29').src='images/29.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Frozen Merination Masala </h1>
+            <h2 class="item_details"> For Zinger, Roast, BBQ, Tikka etc.<br>Price : 150/- RS<br>Quantity : 1 Bag</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('7','0','images/28.svg','Frozen Merination Masala','6','150','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'7','0','images/28.svg','Frozen Merination Masala','6','150','0');"
+                    class="add_cart" id="addCart28">Add to cart!
+            </button>
+            <hr>
+            <img id="29" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/29.svg'){document.getElementById('30').src='images/30.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Zinger Paratha Roll </h1>
+            <h2 class="item_details"> Price : 170/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/29.svg','Zinger Paratha Roll','0','170','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/29.svg','Zinger Paratha Roll','0','170','0');"
+                    class="add_cart" id="addCart29">Add to cart!
+            </button>
+            <hr>
+            <img id="30" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/30.svg'){document.getElementById('31').src='images/31.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Petti Paratha Roll </h1>
+            <h2 class="item_details"> Price : 170/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/30.svg','Petti Paratha Roll','0','170','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/30.svg','Petti Paratha Roll','0','170','0');"
+                    class="add_cart" id="addCart30">Add to cart!
+            </button>
+            <hr> <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3859438957644301" data-ad-slot="2405065048" data-ad-format="auto" data-full-width-responsive="true"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script> -->
+            <hr>
+            <img id="31" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/31.svg'){document.getElementById('32').src='images/32.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Zinger Burger </h1>
+            <h2 class="item_details"> Price : 150/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/31.svg','Zinger Burger','0','150','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/31.svg','Zinger Burger','0','150','0');"
+                    class="add_cart" id="addCart31">Add to cart!
+            </button>
+            <hr>
+            <img id="32" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/32.svg'){document.getElementById('33').src='images/33.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Petti Burger </h1>
+            <h2 class="item_details"> Price : 150/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/32.svg','Chicken Petti Burger','0','150','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/32.svg','Chicken Petti Burger','0','150','0');"
+                    class="add_cart" id="addCart32">Add to cart!
+            </button>
+            <hr>
+            <img id="33" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/33.svg'){document.getElementById('34').src='images/34.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Shami Burger </h1>
+            <h2 class="item_details"> Price : 110/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/33.svg','Chicken Shami Burger','0','110','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/33.svg','Chicken Shami Burger','0','110','0');"
+                    class="add_cart" id="addCart33">Add to cart!
+            </button>
+            <hr>
+            <img id="34" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/34.svg'){document.getElementById('35').src='images/35.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Special Tower Burger </h1>
+            <h2 class="item_details"> Zinger + Petti<br>Price : 250/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/34.svg','Special Tower Burger: Zinger + Petti','0','250','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/34.svg','Special Tower Burger: Zinger + Petti','0','250','0');"
+                    class="add_cart" id="addCart34">Add to cart!
+            </button>
+            <hr>
+            <img id="35" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/35.svg'){document.getElementById('36').src='images/36.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Special Tower Burger </h1>
+            <h2 class="item_details"> Double Zinger<br>Price : 250/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/35.svg','Special Tower Burger: Double Zinger','0','250','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/35.svg','Special Tower Burger: Double Zinger','0','250','0');"
+                    class="add_cart" id="addCart35">Add to cart!
+            </button>
+            <hr>
+            <img id="36" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/36.svg'){document.getElementById('37').src='images/37.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Special Tower Burger </h1>
+            <h2 class="item_details"> Double Petti<br>Price : 250/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/36.svg','Special Tower Burger: Double Petti','0','250','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/36.svg','Special Tower Burger: Double Petti','0','250','0');"
+                    class="add_cart" id="addCart36">Add to cart!
+            </button>
+            <hr>
+            <img id="37" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/37.svg'){document.getElementById('38').src='images/38.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Special Tower Burger </h1>
+            <h2 class="item_details"> Zinger + Shami<br>Price : 220/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/37.svg','Special Tower Burger: Zinger + Shami','0','220','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/37.svg','Special Tower Burger: Zinger + Shami','0','220','0');"
+                    class="add_cart" id="addCart37">Add to cart!
+            </button>
+            <hr>
+            <img id="38" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/38.svg'){document.getElementById('39').src='images/39.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Special Tower Burger </h1>
+            <h2 class="item_details"> Double Shami<br>Price : 180/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/38.svg','Special Tower Burger: Double Shami','0','180','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/38.svg','Special Tower Burger: Double Shami','0','180','0');"
+                    class="add_cart" id="addCart38">Add to cart!
+            </button>
+            <hr>
+            <img id="39" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/39.svg'){document.getElementById('40').src='images/40.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Biscuit Burger </h1>
+            <h2 class="item_details">Price : 200/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/39.svg','Chicken Biscuit Burger','0','200','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/39.svg','Chicken Biscuit Burger','0','200','0');"
+                    class="add_cart" id="addCart39">Add to cart!
+            </button>
+            <hr>
+            <img id="40" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/40.svg'){document.getElementById('41').src='images/41.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Spicy Bite Burger </h1>
+            <h2 class="item_details">Price : 180/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/40.svg','Spicy Burger','0','180','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/40.svg','Spicy Burger','0','180','0');"
+                    class="add_cart" id="addCart40">Add to cart!
+            </button>
+            <hr>
+            <img id="41" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/41.svg'){document.getElementById('42').src='images/42.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Omelette Paratha Roll </h1>
+            <h2 class="item_details">Price : 99/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/41.svg','Omelette Paratha Roll','0','99','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/41.svg','Omelette Paratha Roll','0','99','0'); "
+                    class="add_cart" id="addCart41">Add to cart!
+            </button>
+            <hr>
+            <img id="42" src="images/no_image.svg"
+                 onload="if (this.getAttribute('src') === 'images/42.svg'){document.getElementById('43').src='images/43.svg';}"
+                 alt="Menu Item" width="100%">
+            <h1> Chicken Omelette Paratha Roll </h1>
+            <h2 class="item_details">Price : 170/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/42.svg','Chicken Omelette Paratha Roll','0','170','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/42.svg','Chicken Omelette Paratha Roll','0','170','0');"
+                    class="add_cart" id="addCart42">Add to cart!
+            </button>
+            <hr>
+            <img id="43" src="images/no_image.svg" alt="Menu Item" width="100%">
+            <h1> Cheese Omelette Paratha Roll </h1>
+            <h2 class="item_details">Price : 160/- RS<br>Quantity : 1 Piece</h2>
+            <h2 class="del">Delivery : (KM × 10/-RS)</h2>
+            <button onclick="order('0','0','images/43.svg','Cheese Omelette Paratha Roll','0','160','0'); getLocation();"
+                    class="order_now">Order Now!
+            </button>
+            <button onclick="addToCart(this,'0','0','images/43.svg','Cheese Omelette Paratha Roll','0','160','0');"
+                    class="add_cart" id="addCart43">Add to cart!
+            </button>
+        </div>
+        <hr>
+        <a href="https://play.google.com/store/apps/details?id=com.milkysoft.safoods" target="_blank"> <img
+                src="images/play_badge.svg" width="50%" alt="GET IT ON Google Play"> </a>
+        <hr>
+        <h4 style="font-size: 4.0vw;">Made By <a href="https://milkysoftdevelopers.github.io" target="_blank"
+                                                 style="color: orange">Milkysoft Developers</a></h4></div>
+
+    <img id="cart_btn" class="cart_btn"
+         oncontextmenu="this.style.display='none'; document.getElementById('cart_btn').classList.remove('cart_btn');"
+         onclick="openCart()" src="images/cart0.svg"
+         alt="Your Cart">
+    <hr>
+    <div class="problem"><a href="mailto:info.milkysoft@gmail.com" target="_blank"><p
+            class="problem_text"> Report a problem </p></a></div>
+</div>
+</body>
+</html>
